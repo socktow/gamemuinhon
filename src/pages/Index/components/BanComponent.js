@@ -2,19 +2,21 @@ import styled from "styled-components";
 
 export const Ban = styled.div`
     flex: 1;
-    max-height: 125px;
+    max-height: 120px;
     transition: 2s;
     overflow: hidden;
     box-sizing: border-box;
     height: inherit;
+    border: 1.5px solid white;
+    margin-left : 10px;
 
     ${({team}) => team === "blue" ? (`
         &:nth-child(n+2)::after {
             content: "";
             position: absolute;
-            height: 50%;
+            height: 70%;
             background: rgb(153, 153, 153);
-            top: 25%;
+            top: 16%;
             width: 1px;
             z-index: 1;
         }
@@ -22,11 +24,11 @@ export const Ban = styled.div`
         &:nth-child(-n+4)::after {
             content: "";
             position: absolute;
-            height: 50%;
-            background: rgb(153, 153, 153);
-            top: 25%;
+            height: 70%;
+            top:16%;
             width: 1px;
             z-index: 1;
+            margin-left: 5px;
         }
     `)}
 `;
@@ -46,10 +48,12 @@ export const ChampionBanSplash = styled.div`
 
         &:after {
             content:"";
-            border-top:1px solid rgb(255, 255, 255);
-            width: 30px;
-            transform: rotate(45deg);
-            transform-origin: -50% 55%;
+            width: 100%;
+            height: 100%;
+            margin-top: 7px;
+            background-image: url('https://cdn.discordapp.com/attachments/1189441843054788689/1222548957972922368/ban-placeholder.png?ex=66169e71&is=66042971&hm=29bda45e572cd1ebfac0ae28254750cb311ee2fdd3568d602a927155073a3957&');
+            background-size: 100%;
+            background-repeat: no-repeat;
         }
     `
     :
@@ -71,7 +75,7 @@ export const ChampionBanSplash = styled.div`
 
     ${({active, blank}) => (!active && !blank) &&
     `
-        filter: grayscale(100%);
+        filter: grayscale(75%);
     `}
 `;
 

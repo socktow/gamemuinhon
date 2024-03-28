@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const ChampionPickSplash = styled.div`
     height: 100%;
     width: 100%;
-
     transition: background-color 0.5s ease, opacity 0.75s;
-
+    -webkit-transition: background-image 0.5s ease, opacity 0.75s;
+    transition: background-image 0.5s ease, opacity 0.75s;
     border-width: 0px;
 
     ${({ blank }) => blank ? 
@@ -23,10 +23,6 @@ export const ChampionPickSplash = styled.div`
     ${({ active }) => active === true &&
     `
         animation: pick-shadow 3s infinite;
-        
-        @keyframes pick-shadow {
-            50% {box-shadow: inset 0 -150px 100px -100px rgb(255, 255, 255);}
-        }
     `}
 
     /* Thêm nền màu đen ở dưới cùng */
@@ -41,6 +37,27 @@ export const ChampionPickSplash = styled.div`
     }
     & > img {
         transform: scale(2.5); /* Phóng to ảnh */
+    }
+
+    @keyframes pick-shadow {
+        50% {
+            box-shadow: inset 0 -150px 100px -100px rgb(255, 255, 255);
+        }
+    }
+
+    @keyframes zoomIn {
+        0% {
+            transform: scale(1);
+            filter: blur(0);
+        }
+        50% {
+            transform: scale(1.5);
+            filter: blur(3px);
+        }
+        100% {
+            transform: scale(1);
+            filter: blur(0);
+        }
     }
 `;
 

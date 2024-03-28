@@ -40,9 +40,9 @@ const TimerComponent = React.memo(({currentSlot, startTimer}) => {
   }, [currentSlot, startTimer])
 
   if ((currentSlot >= 0 && currentSlot <= 20) && startTimer) {
-    return (<Timer id={`timer`}>{`:${seconds}`}</Timer>);
+    return (<Timer id={`timer`}>{`${seconds}`}</Timer>);
   } else {
-    return (<Timer id={`timer`}>{`:00`}</Timer>);
+    return (<Timer id={`timer`}>{`00`}</Timer>);
   }
 });
 
