@@ -19,6 +19,7 @@
        {"name": "Bonnie", "role": "mage"},
        {"name": "Bright", "role": "assassin"},
        {"name": "Butterfly", "role": "assassin fighter"},
+       {"name": "Charlotte", "role": "fighter"},
        {"name": "Capheny", "role": "marksman"},
        {"name": "Celica", "role": "marksman"},
        {"name": "Chaugnar", "role": "tank support"},

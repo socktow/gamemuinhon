@@ -248,19 +248,17 @@ export const PicksContainer = styled.div`
   ${({ team }) => (team === "blue" ? `left: 0;` : `right: 0;`)}
   width: 865px;
   height: 250px;
-
   display: flex;
-  flex-direction: row;
-
+  ${({ team }) => (team === "red" ? `flex-direction: row-reverse;` : `flex-direction: row;`)} /* Điều chỉnh flex-direction dựa trên team */
   background-color: rgba(18, 23, 26, 0.9);
 
   ${({ team }) =>
     team === "red" &&
     `
-        ${Pick}:after {
-            right: 0px !important; left: 0px;
-            
-        }   
+      ${Pick}:after {
+        right: 0px !important; 
+        left: 0px;
+      }   
     `}
 `;
 

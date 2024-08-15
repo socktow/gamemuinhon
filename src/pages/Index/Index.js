@@ -149,7 +149,7 @@ const Index = ({ socket }) => {
     socket.on("receiveUpdatedPicks", (newPicks) => {
       setCurrentPicks(newPicks);
     });
-  }, []);
+  }, [socket]);
 
   return (
     <Container>

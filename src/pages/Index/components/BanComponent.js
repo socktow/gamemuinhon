@@ -50,8 +50,8 @@ export const ChampionBanSplash = styled.div`
             content:"";
             width: 100%;
             height: 100%;
-            margin-top: 7px;
-            background-image: url('https://cdn.discordapp.com/attachments/1189441843054788689/1222548957972922368/ban-placeholder.png?ex=66169e71&is=66042971&hm=29bda45e572cd1ebfac0ae28254750cb311ee2fdd3568d602a927155073a3957&');
+            margin-top: 5px;
+            background-image: url('https://cdn.discordapp.com/attachments/1225085238481391749/1235305554352537611/ban-placeholder.png?ex=6633e373&is=663291f3&hm=a05ee739f732fcbaaa14c56ab4e04bd853490e03cb47103c06bf6e7c9a27d94a&');
             background-size: 100%;
             background-repeat: no-repeat;
         }
